@@ -2,11 +2,16 @@
   "name": "nexium_huzaifa_assign2",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/database.ts",
+    "dev:mongo": "node src/mongodb-simple.js",
+    "dev:comparison": "ts-node src/database-comparison.ts",
     "build": "tsc",
     "start": "node dist/database.js",
+    "start:mongo": "node dist/mongodb-mongoose.js",
+    "start:comparison": "node dist/database-comparison.js",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
@@ -26,10 +31,13 @@
   "homepage": "https://github.com/Huzaifanasir95/Nexium_Huzaifa_Assign2#readme",
   "dependencies": {
     "@prisma/client": "^6.11.1",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.3",
     "pg": "^8.16.3",
     "prisma": "^6.11.1"
   },
   "devDependencies": {
+    "@types/mongodb": "^4.0.6",
     "@types/pg": "^8.15.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
