@@ -29,7 +29,7 @@ export async function GET() {
     console.log('Testing Supabase connection...');
     
     // Try to access the blog_summaries table
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('blog_summaries')
       .select('count')
       .limit(1);

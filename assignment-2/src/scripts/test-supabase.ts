@@ -5,7 +5,7 @@ async function testSupabaseConnection() {
     console.log('Testing Supabase connection...');
     
     // Test 1: Get Supabase URL & verify connection
-    const { data: urlData } = await supabase.from('_realtimeconfig').select('*').limit(1);
+    await supabase.from('_realtimeconfig').select('*').limit(1);
     console.log('✅ Successfully connected to Supabase');
     
     // Test 2: Try to access the blog_summaries table
